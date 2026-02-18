@@ -1,0 +1,4 @@
+[project]
+name = "table"
+version = "0.1.0"
+description = "Print formatted tables in the terminal"

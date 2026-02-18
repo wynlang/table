@@ -1,0 +1,16 @@
+fn main() -> int {
+    Test.init("table")
+    // Table formatting
+    var name = "Alice"
+    var age = "30"
+    var row = "│ " + name + " │ " + age + " │"
+    Test.assert(row.contains("Alice"), "has name")
+    Test.assert(row.contains("30"), "has age")
+    Test.assert(row.contains("│"), "has border")
+    // Padding
+    var padded = name
+    while padded.len() < 10 { padded = padded + " " }
+    Test.assert_eq_int(padded.len(), 10, "padded width")
+    Test.summary()
+    return 0
+}

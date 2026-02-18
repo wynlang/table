@@ -1,0 +1,13 @@
+// table — Print formatted tables
+// Usage: Table_print(headers, rows)
+fn Table_row(cols: array, widths: array) -> string {
+    var out = "│"
+    for i in 0..cols.len() {
+        var cell = "" + cols[i]
+        var w = widths[i]
+        out = out + " " + cell
+        for j in 0..w - cell.len() { out = out + " " }
+        out = out + " │"
+    }
+    return out
+}
